@@ -1,0 +1,26 @@
+###
+GET http://localhost:8080/all
+
+
+
+###
+POST http://localhost:8080/add
+Content-Type: application/json
+
+{
+  "id": 10,
+  "firstName": "masha",
+  "secondName": "mashkina",
+  "age": 50
+}
+
+
+###
+GET http://localhost:8080/personById/1
+
+
+
+###
+GET http://localhost:8080/personByName/ivanov
+
+###
