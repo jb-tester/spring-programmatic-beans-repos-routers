@@ -9,7 +9,6 @@ public class AllBeansRegistrar implements BeanRegistrar {
     @Override
     public void register(BeanRegistry registry, Environment env) {
         if (env.matchesProfiles("h2")) {
-            // registry.registerBean(R2dbcConfig.class);
             registry.registerBean(
                     PersonRepository.class,
                     (BeanRegistry.Spec<PersonRepository> spec) -> spec

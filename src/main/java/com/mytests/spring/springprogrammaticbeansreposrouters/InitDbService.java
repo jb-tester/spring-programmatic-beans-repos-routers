@@ -1,10 +1,7 @@
 package com.mytests.spring.springprogrammaticbeansreposrouters;
 
 import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Service;
 
 
 class InitDbService {
@@ -17,8 +14,8 @@ class InitDbService {
     }
 
     @EventListener
-    public void on(ApplicationStartedEvent event) {
-        System.out.println("============= InitDbService.on =======");
+    public void initDbOnApplicationStartedEvent(ApplicationStartedEvent event) {
+        System.out.println("============= database initialization.... =======");
        personRepository.initDB();
     }
 
