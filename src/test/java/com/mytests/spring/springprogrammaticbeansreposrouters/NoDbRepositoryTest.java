@@ -7,6 +7,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -16,6 +17,11 @@ public class NoDbRepositoryTest {
 
     @Autowired
     private PersonRepository personRepository;
+
+    @Test
+    void testPostRepository() {
+        assertThat(this.personRepository).isInstanceOf(NoDBPersonRepository.class);
+    }
 
     @Test
     void testGetAll() {
