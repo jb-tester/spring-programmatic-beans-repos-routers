@@ -23,4 +23,19 @@ GET http://localhost:8080/personById/1
 ###
 GET http://localhost:8080/personByName/ivanov
 
+
+###
+GET http://localhost:8080/nested/inlined1/test1
+
+###
+GET http://localhost:8080/nested/inlined2/test2
+
+###
+GET http://localhost:8080/inlined/test1
+
+###
+GET http://localhost:8080/inlined/test2
+
+###
+GET http://localhost:8080/inlined/test3
 ###
